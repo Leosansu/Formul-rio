@@ -1,6 +1,7 @@
 import { FormularioCadastro } from "./assets/components/FomularioCadastro/FormularioCadastro";
 import { Typography, Container } from "@mui/material";
 import "@fontsource/roboto";
+import ValidaCpf from "./assets/components/validators/ValidaCpf";
 
 export const App = () => {
   return (
@@ -9,14 +10,12 @@ export const App = () => {
         Formulário de cadastro
       </Typography>
 
-      <FormularioCadastro
-        aoEnviar={(dados) => {
-          console.log("Dados recebidos:", dados);
-          // exemplo: enviar para API
-          // fetch("/api/cadastro", { method: "POST", body: JSON.stringify(dados) })
-        }}
-      />
+      <FormularioCadastro aoEnviar={aoEnviar} />
+
     </Container>
   );
 };
 
+function aoEnviar(dados: any) {
+  console.log(dados);
+}

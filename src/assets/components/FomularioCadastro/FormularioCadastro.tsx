@@ -15,6 +15,7 @@
  *
 
  */
+import ValidaCpf from "../validators/ValidaCpf";
 import React, { useState } from "react";
 import { TextField, Button, Switch, FormControlLabel } from "@mui/material";
 
@@ -33,6 +34,7 @@ type FormularioCadastroProps = {
 };
 
 export function FormularioCadastro({ aoEnviar }: FormularioCadastroProps): React.ReactElement {
+
   const [nome, setNome] = useState<string>("");
   const [sobrenome, setSobrenome] = useState<string>("");
   const [cpf, setCpf] = useState<string>("");
@@ -85,7 +87,10 @@ export function FormularioCadastro({ aoEnviar }: FormularioCadastroProps): React
         fullWidth
         error ={!erro.cpf.valido}
         helperText={erro.cpf.texto}
-        onBlur={(event) =>{setErro({cpf:{valido:false,texto:"CPF deve ter 11 dígitos"}})}}
+       onBlur={(event) => {
+  const ehValido = ValidaCpf(event.target.value);
+  setErro({ cpf: ehValido });
+}}
       />
 
       <FormControlLabel
