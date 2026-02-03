@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Ignorar arquivo de documentação do formulário
+/src/assets/components/FomularioCadastro/FormularioCadastro.md
