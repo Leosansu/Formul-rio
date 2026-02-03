@@ -57,8 +57,6 @@ export default defineConfig([
     npm install
     ```
 
-    - Desenvolvimento (HMR):
-
     # FormularioReact — Aplicação React + TypeScript (Vite)
 
     Aplicação simples em React + TypeScript gerada com Vite que demonstra um formulário de cadastro com componentes do Material UI e validação de CPF.
@@ -71,8 +69,8 @@ export default defineConfig([
 
     ## Visão Geral
 
-    - **Descrição**: Projeto de exemplo que contém um componente de formulário (`FormularioCadastro`) com campos controlados e validação local de CPF.
-    - **UI**: Utiliza `@mui/material` e `@emotion` para estilos.
+    # (arquivo iniciava com um fence de código removido para permitir renderização normal)
+ 
 
     ## Como Rodar
 
@@ -126,8 +124,6 @@ export default defineConfig([
     - **Comportamento de validação**: O campo `CPF` é normalizado para conter apenas dígitos e é truncado para 11 caracteres antes de atualizar o estado.
     - **Campos controlados**: Todos os campos do formulário são controlados via `useState` e atualizados por `onChange`.
 
-    ## Padrões e Convenções
-
     - Não alterar o contrato do `onSubmit` sem atualizar todos os pontos do código que o consomem.
     - Preferir componentes MUI para manter consistência de UI/accessibilidade.
 
@@ -141,6 +137,5 @@ export default defineConfig([
     - Formulário principal: [src/assets/components/FomularioCadastro/formularioCadastro.tsx](src/assets/components/FomularioCadastro/formularioCadastro.tsx)
     - Validador CPF: [src/assets/components/validators/ValidaCpf.tsx](src/assets/components/validators/ValidaCpf.tsx)
 
-    Se quiser, posso: 1) ajustar o texto do `README.md`; 2) adicionar exemplos de uso do componente; ou 3) commitar e dar push das mudanças. Qual prefere?
 
 
